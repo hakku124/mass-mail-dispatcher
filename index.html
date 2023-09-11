@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Mass-Mail Dispatcher</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+   </head>
+   <body>
+      <header>
+         <nav>
+            <ul>
+               <li><a href="#home">HOME</a></li>
+               <li><a href="#write-email">WRITE EMAIL</a></li>
+               <li><a href="#valid-emails">VALID EMAILS</a></li>
+               <li><a href="#invalid-emails">INVALID EMAILS</a></li>
+            </ul>
+         </nav>
+      </header>
+      <div class="bg">
+        <div class="container">
+          <div class="select animated fadeInDown delay-4s">
+             <h1 id="head">Mass-Mail Dispatcher</h1>
+          </div>
+          <input type="file" id="upload" accept="text/csv">
+          <div class="mailInfo" >
+             <form onsubmit="sendEmail(); reset(); return false;"></form>
+             <h2 id="box-heading">WRITE YOUR EMAIL HERE</h2>
+             <p><input type="email" id="from" placeholder="From (Email Id)" required></p>
+             <p><input type="text" id="subject" placeholder="Subject" required></p>
+             <p><textarea id="msg" rows="12" cols="12" placeholder="Body" required></textarea></p>
+             <p><button type="submit" id="submit" style="font-weight: bold;">Send</button></p>
+             I
+          </div>
+       </div>
+       <hr>
+       <div class="tables">
+        <div class="valTab">
+          <table id="val">
+            <tr>
+              <td>
+                <h2>Valid Emails: <span id="valCount"></span></h2>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="invalTab">
+          <table id="inval">
+              <tr>
+                <td>
+                  <h2>Invalid Emails : <span id="invalCount"></span></h2>
+                </td>
+              </tr>
+          </table>
+        </div>
+      </div>
+      </div>
+    </section>
+    <hr>
+    <script src="http://smtpjs.com/v3/smtp.js"></script>
+    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script> 
+    <script>var wow = new WOW(
+      {
+        boxClass: 'wow',
+        animateClass: 'animated',
+        offset: 0,
+        mobile: true,
+        live: true,
+        callback: function (box) {
+
+        },
+        scrollContainer: null,
+        resetAnimation: true,
+      });
+      wow.init();
+    </script>
+    <script>
+      function scrollToSections() {
+        var valSection = document.querySelector('.valTab');
+        valSection.scrollIntoView({behavior: 'smooth' });
+        var navLinks = document.querySelectorAll('nav ul li a');
+          navLinks.forEach(function(link) {
+            link.addEventListener('click', scrollToSections);
+          });
+      
+        setTimeout(function() {
+          var invalSection = document.querySelector('.invalTab');
+          invalSection.scrollIntoView({behavior: 'smooth' });
+        }, 1000);
+      }
+      var uploadInput = document.getElementById('upload');
+      uploadInput.addEventListener('change', function() {
+        scrollToSections();
+      });
+    </script>
+    <a href="#" id="scroll-top-btn"><i class="fas fa-arrow-up"></i></a>
+</body>
+</html>
+```

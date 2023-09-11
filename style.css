@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: whitesmoke;
+  background-repeat: repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100vh;
+  flex-wrap: wrap;
+}
+
+.select {
+  display: flex;
+  flex-direction: column;
+}
+
+#head {
+  font-size: 50px;
+  text-align: left;
+}
+
+#box-heading {
+  padding: 5px;
+  margin: auto;
+  text-align: center;
+}
+
+.mailInfo {
+  width: 500px;
+  position: relative;
+  height: 65%;
+  color: white;
+  background: black;
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px #2773a5;
+  z-index: 2;
+}
+
+#from, #subject {
+  margin: 14px;
+  padding: 10px;
+  width: 470px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+#msg {
+  margin: 14px;
+  padding: 10px;
+  width: 470px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+#submit {
+  width: 10em;
+  height: 3em;
+  margin: 0;
+  position: relative;
+  top: 92%;
+  left: 50%;
+  border-radius: 30px;
+}
+
+button {
+  background: black;
+  color: #e6dede;
+  border: 2px solid #0f0909;
+  font-size: 17px;
+  letter-spacing: 2px;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  margin: 15px 30px;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  box-shadow: 0 1px 1px #130b0b;
+}
+
+.select input {
+  background-color: rgb(255, 255, 255);
+  border: none;
+  margin: 6vh auto;
+  border-radius: 50px;
+  box-shadow: 5px 5px 10px black;
+  font-weight: 600;
+  font-size: 1rem;
+  outline: none;
+  width: 350px;
+}
+
+.select input::file-selector-button {
+  background: black;
+  color: white;
+  padding: 20px;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 1px 1px #6b4559;
+  outline: none;
+}
+
+.select input::file-selector-button:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+.tables {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+table {
+  text-align: left;
+  float: left;
+  width: 500px;
+}
+
+hr {
+  width: 70%;
+  margin-left: auto;
+  margin-left: auto;
+}
+
+nav {
+  background-color: black;
+  padding: 10px 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin-right: 10px;
+}
+
+nav ul li:hover {
+  transform: scale(0.8);
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  font-size: 20px;
+  font-family: 'Roboto Slab', serif;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+nav ul {
+  gap: 16px;
+}
+
+#scroll-top-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: none;
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  font-size: 24px;
+  border-radius: 50%;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+#scroll-top-btn:hover {
+  background-color: #333;
+}
